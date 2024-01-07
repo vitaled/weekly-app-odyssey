@@ -1,0 +1,9 @@
+{
+    "birthdate": "1984-12-15",
+    "lifetime": 80,
+    "events": [
+        { "week": 1, "description": "Born" },
+        { "week": 52, "description": "First birthday" },
+        { "week": 2038, "description": "Started the first week of my Weekly App Odyssey project" }
+        ]
+}
