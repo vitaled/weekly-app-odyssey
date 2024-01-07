@@ -1,0 +1,80 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    color: #333;
+}
+
+#calendarTitle {
+    text-align: center;
+    font-size: 24px;
+}
+
+
+.toggle-button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+
+.toggle-button:hover {
+    background-color: #0056b3;
+}
+
+#calendar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.week {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    position: relative;
+}
+
+.week.past {
+    background-color: #bbb;
+}
+
+.week.current {
+    background-color: #007BFF;
+}
+
+.week.event {
+    background-color: #28a745;
+}
+
+.week.small {
+    width: 10px;
+    height: 10px;
+}
+
+
+.week:hover::after {
+    content: attr(title); /* Use the title attribute as the tooltip text */
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    white-space: nowrap; /* Prevent the tooltip text from wrapping to the next line */
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 18px;
+    z-index: 1; /* Ensure the tooltip appears above other elements */
+}
