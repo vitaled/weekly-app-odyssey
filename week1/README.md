@@ -29,7 +29,6 @@ You can also add to events on the same configuration file:
 }
 ```
 
-
 ## Deploy
 
 To deploy this project:
@@ -56,6 +55,6 @@ To deploy this project:
 
 ```bash
   http-server . -p 8000
-``` 
+```
 
-4) Open your browser and go to http://localhost:8000
+4) Open your browser and go to <http://localhost:8000>
