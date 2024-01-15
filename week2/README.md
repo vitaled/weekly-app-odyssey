@@ -23,13 +23,13 @@ Move to the color-palette-generator directory under week2:
 Install the dependencies:
 
 ```PowerShell
-  npm install express ejs body-parser
+  npm install
 ```
 
 Start the project:
 
 ```PowerShell
-  node .\app.js
+  npm start
 ```
 
 Open your browser and go to http://localhost:3000
