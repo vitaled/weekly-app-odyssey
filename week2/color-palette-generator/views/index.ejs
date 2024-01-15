@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color Palette Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+
+    <style>
+      .copy-button {
+        background-color: rgba(255, 255, 255, 0.7); /* semi-transparent white */
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition-duration: 0.4s;
+      }
+
+      .copy-button:hover {
+        background-color: white; /* solid white */
+        color: black;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .header {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .colors {
+        display: flex;
+        flex-direction: row;
+        margin-top: 80px; /* Adjust this value based on the actual height of your header */
+      }
+      .color {
+        flex: 1;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 2em;
+      }
+      .download-button {
+        position: fixed;
+        top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .download-palette-button {
+        right: 10px;
+      }
+
+      .export-csv-button {
+        right: 160px;
+      }
+
+      .export-json-button {
+        right: 290px;
+      }
+
+      .export-css-button {
+        right: 430px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Color Palette Generator</h1>
+      <p>Press the space bar to generate a new palette</p>
+    </div>
+    <button
+      class="download-button download-palette-button"
+      onclick="downloadPalette()"
+    >
+      Download Palette
+    </button>
+
+    <button
+      class="download-button export-csv-button"
+      onclick="exportPalette('csv')"
+    >
+      Export as CSV
+    </button>
+    <button
+      class="download-button export-json-button"
+      onclick="exportPalette('json')"
+    >
+      Export as JSON
+    </button>
+    <button
+      class="download-button export-css-button"
+      onclick="exportPalette('css')"
+    >
+      Export as CSS
+    </button>
+
+    <div id="palette" class="colors">
+      <% colors.forEach(function(color) { %>
+      <div class="color" style="background-color: <%= color.rgb %>">
+        <span id="hex<%= color.hex %>"><%= color.hex %></span>
+        <button
+          class="copy-button"
+          onclick="copyToClipboard('<%= color.hex %>')"
+        >
+          Copy Hex
+        </button>
+      </div>
+      <% }); %>
+    </div>
+    <script>
+      window.addEventListener("keydown", function (event) {
+        if (event.code === "Space") {
+          location.reload();
+        }
+      });
+      function copyToClipboard(hex) {
+        navigator.clipboard.writeText(hex).then(
+          function () {
+            console.log("Copying to clipboard was successful!");
+          },
+          function (err) {
+            console.error("Could not copy text: ", err);
+          }
+        );
+      };
+      function downloadPalette() {
+        html2canvas(document.getElementById("palette")).then(function (canvas) {
+          var link = document.createElement("a");
+          link.href = canvas.toDataURL("image/png");
+          link.download = "palette.png";
+          link.click();
+        });
+      };
+
+      function exportPalette(format) {
+        const colors =  <%- JSON.stringify(colors) %>;
+        let data;
+
+        switch (format) {
+            case 'csv':
+                data = colors.map(color => color.hex).join('\n');
+                downloadFile(data, 'palette.csv', 'text/csv');
+                break;
+            case 'json':
+                data = JSON.stringify(colors.map(color => color.hex));
+                downloadFile(data, 'palette.json', 'application/json');
+                break;
+            case 'css':
+                data = colors.map(color => `.color-${color.hex.slice(1)} { background-color: ${color.hex}; }`).join('\n');
+                downloadFile(data, 'palette.css', 'text/css');
+                break;
+        }
+      }
+
+      function downloadFile(data, filename, type) {
+          const file = new Blob([data], {type: type});
+          const a = document.createElement('a');
+          a.href = URL.createObjectURL(file);
+          a.download = filename;
+          a.click();
+      }
+    </script>
+  </body>
+</html>
