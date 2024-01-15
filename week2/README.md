@@ -8,15 +8,15 @@ This week we will be creating a color palette generator. A color palette generat
 
 To deploy this project:
 
-1) Clone this repository
+Clone this repository:
 
-```bash
+```PowerShell
   git clone https://github.com/vitaled/weekly-app-odyssey
 ```
 
-1) Move to the color-palette-generator directory under week2:
+Move to the color-palette-generator directory under week2:
 
-```bash
+```PowerShell
   cd week2/color-palette-generator
 ```
 
