@@ -1,0 +1,116 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #333;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+#task-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #f4f4f4;
+    border-radius: 0;
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    background-color: #444;
+    border: 2px solid #f4f4f4;
+    border-radius: 0;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-list li span {
+    flex: 1;
+    color: #f4f4f4;
+}
+
+.task-list li button {
+    margin-left: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: 2px solid #f4f4f4;
+    border-radius: 0;
+    background-color: transparent;
+    color: #f4f4f4;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#task-form button {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.task-list button {
+    background-color: transparent;
+    color: #f4f4f4;
+}
+
+.complete::before {
+    content: "\f00c";  /*Unicode for Font Awesome check icon */
+    font-family: "Font Awesome 5 Free"; /* Font family for free solid icons */
+    font-weight: 900; /* Required for correct display of solid icons */
+    /*color: #00ff00; *//* Green color */
+} 
+
+.completed::before {
+    content: "\f00d"; /* Unicode for Font Awesome red "x" icon */
+    font-family: "Font Awesome 5 Free"; /* Font family for free solid icons */
+    font-weight: 900; /* Required for correct display of solid icons */
+    /* color: #ff0000; */ /* Red color */
+} 
+
+.delete::before {
+    content: "\f1f8";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    /*color: #ff0000;*/
+}
+
+ .add::before {
+    content: "\f067";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #333;
+}
