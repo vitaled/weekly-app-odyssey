@@ -23,6 +23,6 @@ I will also try to build apps that are not too complex, so that I can build them
 
 I will be building a new app every week, and I will be publishing a new article every week. The schedule for the series is as follows:
 
-- Week 1 (From 1st of Janaury to 7th): [Calendar of life](./week1)
-- Week 2 (From 8th of Janaury to 14th): [Color Palette Generator](./week2)
-- Week 3 (From 15th of Janaury to 21st): [Tasktopia](./week3)
+- Week 1 (From 1st of January to 7th): [Calendar of life](./week1)
+- Week 2 (From 8th of January to 14th): [Color Palette Generator](./week2)
+- Week 3 (From 15th of January to 21st): [Tasktopia](./week3)
