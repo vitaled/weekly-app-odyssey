@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PassFort</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="common.js"></script>
+    <script src="popup.js"></script>
+    <script src="background.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  </head>
+  <body>
+    <h1>PassFort</h1>
+
+    <h2>Add new credentials</h2>
+    <form id="addForm">
+      <input type="text" id="website" name="Url" placeholder="Url" /><br />
+      <input type="text" id="username" name="username" placeholder="Username" /><br />
+      <input type="password" id="password" name="password" placeholder="Password" /><br />
+      <input type="submit" value="Add" />
+    </form>
+
+    <h2>Search credentials</h2>
+    <form id="searchForm">
+      <input
+        type="text"
+        id="search"
+        name="search"
+        placeholder="Search for a Url"
+      />
+      <input type="submit" value="Search" />
+    </form>
+    <div id="results"></div>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  background-color: #f4f4f4;
+  color: #333;
+  min-width: 200px;
+  min-height: 100px;
+  max-width: 500px;
+  max-height: 400px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#username, #password {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 0; /* Remove the curves */
+  transition: border-color 0.3s ease; /* Add this line */
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #007bff;
+}
+
+input[type="submit"] {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0; /* Remove the curves */
+  display: inline-block; /* Add this line */
+  transition: background-color 0.3s ease; /* Add this line */
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#results {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  background-color: #f4f4f4;
+  color: #333;
+  min-width: 200px;
+  min-height: 100px;
+  max-width: 500px;
+  max-height: 400px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#username, #password {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 0; /* Remove the curves */
+  transition: border-color 0.3s ease; /* Add this line */
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #007bff;
+}
+
+input[type="submit"] {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0; /* Remove the curves */
+  display: inline-block; /* Add this line */
+  transition: background-color 0.3s ease; /* Add this line */
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#results {
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+}
+
+.result {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  border: 1px solid #ddd; /* Add a border */
+  display: flex; /* Align the content horizontally */
+  justify-content: space-between; /* Space out the content */
+  align-items: center; /* Align the content vertically */
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f00; /* Make the button red */
+  font-size: 1.2em; /* Make the button larger */
+}
+
+.delete-button:hover {
+  color: #c00; /* Darken the button when hovered */
+}
+
+.delete-button:before {
+  content: "\f2ed"; /* Add the trash icon */
+  font-family: "Font Awesome 5 Free"; /* Use Font Awesome */
+  font-weight: 900; /* Make the icon solid */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  
+  padding: 20px;
+}
+
+.credential {
+  margin-bottom: 20px;
+}
+
+.fas {
+  cursor: pointer;
+  color: #007bff;
+}
+
+.fas:hover {
+  color: #0056b3;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  
+  padding: 20px;
+}
+
+.credential {
+  margin-bottom: 20px;
+}
+
+.fas {
+  cursor: pointer;
+  color: #007bff;
+}
+
+.fas:hover {
+  color: #0056b3;
+}

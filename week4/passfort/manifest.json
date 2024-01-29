@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Password Manager",
+  "version": "1.0",
+  "description": "A simple password manager",
+  "permissions": ["storage", "tabs", "notifications", "activeTab","clipboardWrite","<all_urls>"],
+  "background": {
+    "scripts": ["common.js", "background.js"],
+    "persistent": false
+  },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },  
+  "web_accessible_resources": ["inject.js"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["common.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
